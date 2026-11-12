@@ -80,7 +80,12 @@ section {
 <p>Hai premuto il pulsante <span id="numeroClic">0</span> volte.</p>
   
 <button onclick="azzeraClic()">Azzera</button>
-  
+ 
+<h2>Come ti chiami?</h2>
+<input type="text" id="nomeUtente" placeholder="Scrivi il tuo nome">
+<button onclick="salutaUtente()">Salutami!</button>
+<p id="saluto"></p>
+   
 <script>
   function cambiaTesto() {
     document.getElementById("messaggio").innerText =
@@ -110,6 +115,12 @@ if (numeroClic === 10) {
 function azzeraClic() {
   numeroClic = 0;
   document.getElementById("numeroClic").innerText = numeroClic;
+}
+  
+function salutaUtente() {
+  let nome = document.getElementById("nomeUtente").value;
+  document.getElementById("saluto").innerText =
+    "Ciao " + Emanuele + "! Benvenuto nel mio sito!";
 }
   
 </script>
