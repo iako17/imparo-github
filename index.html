@@ -59,7 +59,9 @@ section {
   <h1 id="home">Benvenuto nel mio sito!</h1>
   <p>Sto imparando a programmare
   con GitHub e ChatGPT.</p>
-  <button onclick="alert('Bravo! Hai creato il tuo primo pulsante interattivo!')">Cliccami!</button>
+  <button onclick="cambiaTesto()">Cliccami!</button>
+
+<p id="messaggio">Premi il pulsante!</p>
   
 <section id="chi-sono">
   <h2>Chi sono</h2>
@@ -72,6 +74,13 @@ section {
   <p>Questa è la sezione dei contatti
   del mio primo sito web.</p>
 </section>
+  
+<script>
+  function cambiaTesto() {
+    document.getElementById("messaggio").innerText =
+      "Complimenti! Hai modificato il testo con JavaScript!";
+  }
+</script>
   
 </body>
 </html>
