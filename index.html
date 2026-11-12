@@ -86,6 +86,11 @@ section {
 <button onclick="salutaUtente()">Salutami!</button>
 <p id="saluto"></p>
    
+<h2>Calcola il totale</h2>
+<input type="number" id="quantita" placeholder="Quanti articoli?">
+<button onclick="calcolaTotale()">Calcola</button>
+<p id="risultatoTotale"></p>
+  
 <script>
   function cambiaTesto() {
     document.getElementById("messaggio").innerText =
@@ -130,6 +135,20 @@ function salutaUtente() {
   }
 }
   
+  
+function calcolaTotale() {
+  let quantita = Number(document.getElementById("quantita").value);
+  let prezzo = 5;
+
+  if (quantita <= 0 || !Number.isInteger(quantita)) {
+    document.getElementById("risultatoTotale").innerText =
+      "Inserisci una quantità valida.";
+  } else {
+    let totale = quantita * prezzo;
+    document.getElementById("risultatoTotale").innerText =
+      "Totale: " + totale + " euro";
+  }
+}
   
 </script>
   
