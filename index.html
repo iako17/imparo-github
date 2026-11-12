@@ -102,6 +102,9 @@ let numeroClic = 0;
 function contaClic() {
   numeroClic = numeroClic + 1;
   document.getElementById("numeroClic").innerText = numeroClic;
+if (numeroClic === 10) {
+  alert("Complimenti! Hai raggiunto 10 clic!");
+}
 }
   
 function azzeraClic() {
