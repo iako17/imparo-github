@@ -62,7 +62,9 @@ section {
   <button onclick="cambiaTesto()">Cliccami!</button>
 
 <p id="messaggio">Premi il pulsante!</p>
-  
+  <button onclick="cambiaColore()">
+  Cambia colore
+  </button>
 <section id="chi-sono">
   <h2>Chi sono</h2>
   <p>Sto imparando a creare siti web
@@ -80,6 +82,11 @@ section {
     document.getElementById("messaggio").innerText =
       "sto imparando JavaScript e presto creerò la mia prima applicazione";
   }
+  
+function cambiaColore() {
+  document.body.style.backgroundColor = "lightgreen";
+}
+  
 </script>
   
 </body>
