@@ -83,9 +83,15 @@ section {
       "sto imparando JavaScript e presto creerò la mia prima applicazione";
   }
   
+
 function cambiaColore() {
-  document.body.style.backgroundColor = "lightcoral";
+  if (document.body.style.backgroundColor === "lightcoral") {
+    document.body.style.backgroundColor = "lightblue";
+  } else {
+    document.body.style.backgroundColor = "lightcoral";
+  }
 }
+  
   
 </script>
   
