@@ -88,6 +88,7 @@ section {
    
 <h2>Calcola il totale</h2>
 <input type="number" id="quantita" placeholder="Quanti articoli?">
+  <input type="number" id="prezzo" placeholder="Prezzo unitario in euro" step="0.01">
 <button onclick="calcolaTotale()">Calcola</button>
 <p id="risultatoTotale"></p>
   
@@ -138,16 +139,21 @@ function salutaUtente() {
   
 function calcolaTotale() {
   let quantita = Number(document.getElementById("quantita").value);
-  let prezzo = 5;
+  let campoPrezzo = document.getElementById("prezzo").value;
+  let prezzo = Number(campoPrezzo);
 
-  if (quantita <= 0 || !Number.isInteger(quantita)) {
+  if (quantita <= 0 || !Number.isInteger(quantita) ||
+      campoPrezzo.trim() === "" || prezzo < 0) {
     document.getElementById("risultatoTotale").innerText =
-      "Inserisci una quantità valida.";
+      "Inserisci una quantità e un prezzo validi.";
   } else {
     let totale = quantita * prezzo;
     document.getElementById("risultatoTotale").innerText =
-      "Totale: " + totale + " euro";
+      "Totale: " + totale.toFixed(2) + " euro";
   }
+}
+  
+
 }
   
 </script>
