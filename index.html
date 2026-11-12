@@ -76,7 +76,8 @@ section {
   <p>Questa è la sezione dei contatti
   del mio primo sito web.</p>
 </section>
-  
+  <button onclick="contaClic()">Conta clic</button>
+<p>Hai premuto il pulsante <span id="numeroClic">0</span> volte.</p>
 <script>
   function cambiaTesto() {
     document.getElementById("messaggio").innerText =
@@ -92,6 +93,13 @@ function cambiaColore() {
   }
 }
   
+  
+let numeroClic = 0;
+
+function contaClic() {
+  numeroClic = numeroClic + 1;
+  document.getElementById("numeroClic").innerText = numeroClic;
+}
   
 </script>
   
