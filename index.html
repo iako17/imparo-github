@@ -117,11 +117,19 @@ function azzeraClic() {
   document.getElementById("numeroClic").innerText = numeroClic;
 }
   
+
 function salutaUtente() {
   let nome = document.getElementById("nomeUtente").value;
-  document.getElementById("saluto").innerText =
-    "Ciao " +nome+ "! Benvenuto nel mio sito!";
+
+  if (nome.trim() === "") {
+    document.getElementById("saluto").innerText =
+      "Attenzione! Inserisci il tuo nome.";
+  } else {
+    document.getElementById("saluto").innerText =
+      "Ciao " + nome + "! Benvenuto nel mio sito!";
+  }
 }
+  
   
 </script>
   
